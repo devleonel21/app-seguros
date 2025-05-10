@@ -1,7 +1,7 @@
 import './resume.scss';
-import Steps from '../../components/steps/Steps';
-import Header from './components/header/header';
+import Steps from '../../components/steps/Steps'; 
 import Card from './components/card/Card';
+import Header from './components/header/Header';
 
 const Resume = () => {
   return (
