@@ -1,0 +1,84 @@
+.plan-card {
+    display: flex;
+    width: 288px;
+    flex-direction: column;
+    background: white;
+    padding: 50px 38px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    box-shadow: 5px 5px 17px 0px #d8d8d8;
+    position: relative;
+  
+    &__header {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #aaa;
+    }
+  
+    &__header-row {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  
+    &__title {
+      margin: 0;
+      font-size: 24px;
+    }
+  
+    &__icon {
+      width: 54px;
+    }
+  
+    &__label {
+      font-size: 12px;
+      text-transform: uppercase;
+      color: rgba(121, 129, 178, 1);
+      font-weight: 900;
+    }
+  
+    &__price {
+      margin: 0;
+      font-size: 20px;
+      color: rgba(20, 25, 56, 1);
+      font-weight: 900;
+    }
+  
+    &__body {
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+  
+    &__list {
+      padding-left: 17px;
+      margin-bottom: 20px;
+    }
+  
+    &__item {
+      font-size: 16px;
+      line-height: 28px;
+      margin-bottom: 20px;
+    }
+  
+    
+
+    &__footer {
+        position: absolute;
+        bottom: 30px;
+    }
+
+    &__button {
+        font-size: 18px;
+        background: rgba(255, 28, 68, 1);
+        padding: 14px 38px;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 8px;
+      }
+  }
+  

@@ -1,0 +1,82 @@
+
+.plans {
+    background-color: rgba(250, 251, 255, 1); 
+    &__container { 
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      padding: 30px 0px;
+      background-color: rgba(250, 251, 255, 1);
+
+      @media (max-width: 640px) {
+        max-width: 336px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  
+    &__back {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 18px;
+      color: blue;
+      text-decoration: none;
+
+      @media (max-width: 640px) {
+        display: none;
+      }
+  
+      img {
+        display: inline-block;
+      }
+    }
+  
+    &__header { 
+      margin: 0 auto;
+      text-align: center;
+      padding-top: 40px;
+
+      @media (max-width: 640px) {
+        text-align: left;
+        padding-top: 0px;
+      }
+  
+      h1 {
+        font-size: 40px;
+        line-height: 48px;
+        margin-bottom: 0;
+
+        @media (max-width: 640px) {
+          font-size: 28px;
+          margin-top: 0px;
+        }
+      }
+  
+      p {
+        font-size: 16px;
+      }
+    }
+  
+    &__card-group {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 24px;
+
+      @media (max-width: 640px) {
+        flex-direction: column;
+      }
+    }
+
+    &__result{
+        display: flex; 
+        flex-wrap: wrap;
+        padding: 30px 0px;
+        background:rgba(250, 251, 255, 1);
+        gap: 40px;
+        justify-content: space-around;
+    }
+  }
+  

@@ -1,0 +1,230 @@
+.request {
+    &__container { 
+      margin: auto;
+      display: flex;
+      padding: 30px 0;
+      position: relative;
+      z-index: 10;
+
+      @media (max-width: 640px) {
+        padding-bottom: 100px;
+      }
+    }
+  
+    &__imageBanner {
+      width: 40%;
+      display: flex;
+      align-items: center;
+
+      @media (max-width: 640px) {
+        display: none;
+      }
+  
+      img {
+        width: 100%;
+      }
+    }
+  
+    &__formBanner {
+      width: 60%;
+      max-width: 352px;
+      margin: 0 auto;
+      @media (max-width: 640px) {
+        width: 100%; 
+      }
+
+      &--mobile{
+        @media (max-width: 640px) {
+          display: flex;
+          flex-direction: row;
+          padding-bottom: 20px;
+          gap: 5px;
+          border-bottom: 1px solid rgba(204, 209, 238, 1);
+          align-items: center;
+        }
+        img{ 
+          display: none;
+          @media (max-width: 640px) {
+             max-width: 136px;
+             width: 100%;
+             display: block;
+          }
+        }
+       
+      }
+    }
+  
+    &__badge {
+      font-size: 14px;
+      padding: 4px 8px;
+      background: linear-gradient(86.01deg, #00F4E2 0%, #00FF7F 100%);
+      color: #000;
+      font-weight: bold;
+      border-radius: 5px;
+      display: inline-block;
+      @media (max-width: 640px) {
+        font-size: 12px;
+      }
+    }
+  
+    &__title {
+      font-size: 32px;
+      line-height: 40px;
+      margin: 15px 0 0;
+      font-weight: 700;
+      @media (max-width: 640px) {
+        font-size: 28px;
+        margin: 0;
+      }
+
+    }
+  
+    &__description {
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 600;
+    }
+  
+    &__form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 20px;
+    }
+  
+    &__inputGroup {
+      display: flex;
+    }
+  
+    &__select {
+      width: 120px;
+      padding: 16px 10px;
+      border-radius: 8px 0 0 8px;
+      border: 1px solid #ccc;
+      border-right: none;
+      font-size: 16px;
+      background: #fff;
+
+      &.error{
+        border: 1px solid red;
+        outline: none;
+      }
+    }
+  
+    &__inputWrapper {
+      position: relative;
+      flex-grow: 1;
+    }
+  
+    &__label {
+      position: absolute;
+      top: 5px;
+      left: 10px;
+      font-size: 12px;
+      color: rgba(94, 100, 136, 1);
+      &.error{
+        color:red;
+      }
+    }
+  
+    &__input {
+      width: 100%;
+      padding: 24px 10px 8px 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 0 8px 8px 0;
+      background: #fff;
+      box-sizing: border-box;
+
+      &.error{
+        border: 1px solid red;
+        outline: none;
+      }
+    }
+
+    &__input-border {
+      width: 100%;
+      padding: 24px 10px 8px 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      background: #fff;
+      border-radius:8px;
+      box-sizing: border-box; 
+        max-width: 352px; 
+
+      &.error{
+        border: 1px solid red;
+        outline: none;
+      }
+    }
+
+    
+  
+    &__checkboxGroup {
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      gap: 6px;
+      
+
+      &-input {
+        width: 16px;
+        height: 16px;
+        accent-color: #1a1a1a; 
+
+        &.error{
+          border: 1px solid red;
+          outline: none;
+        }
+      }
+
+      &-label {
+        cursor: pointer !important;
+
+        &.error{
+          color:red;
+        }
+      }
+    }
+  
+    &__termsLink {
+      font-size: 12px;
+      text-decoration: underline;
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+  
+    &__button {
+      font-size: 20px;
+      padding: 20px 40px;
+      background-color: #1a1a1a;
+      color: white;
+      border: none;
+      border-radius: 50px;
+      font-weight: bold;
+      min-width: 184px;
+      cursor: pointer;
+      font-weight: 700;
+      @media (max-width: 640px) {
+        font-size: 18px;
+      }
+    }
+
+    .spinner {
+      border: 2px solid #f3f3f3;
+      border-top: 2px solid #000;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      animation: spin 0.6s linear infinite;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  }
+  
