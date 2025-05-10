@@ -28,6 +28,7 @@ function CardPlan({ type, data }: CardPlanProps) {
         setUserData({ planName, planPrice });
 
         navigate('/resume');
+        window.scrollTo(0, 0);
       };
 
    
