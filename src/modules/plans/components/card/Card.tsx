@@ -1,14 +1,5 @@
+import type { CardProps } from '../../../../types/card';
 import './card.scss';
-
-type CardProps = {
-  title: string;
-  description: string;
-  icon: string;
-  name: string;
-  value: string;
-  checked?: boolean;
-  onChange?: () => void;
-};
 
 function Card({ title, description, icon, name, value, checked = false, onChange }: CardProps) {
   return (

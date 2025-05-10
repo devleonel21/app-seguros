@@ -15,7 +15,19 @@
       gap: 5px;
       padding-bottom: 15px;
       border-bottom: 1px solid #aaa;
+
+      &-recommended{
+        font-size: 12px;
+        font-weight: 900;
+        padding: 2px 8px;
+        border-radius: 6px;
+        background: rgba(125, 240, 186, 1);
+        display: inline-block;
+        width: fit-content;
+      }
     }
+
+    
   
     &__header-row {
       display: flex;

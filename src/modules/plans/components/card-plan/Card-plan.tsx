@@ -1,16 +1,12 @@
 import { useNavigate } from 'react-router-dom';
-import './card-plan.scss';
-import { useUserStore } from '../../../../stores/useUserStore';
 
-type CardPlanProps = {
-    type : string;
-    data: {
-      name: string;
-      price: number;
-      description: string[];
-      age: number;
-    };
-};
+import { useUserStore } from '../../../../stores/useUserStore';
+import type { CardPlanProps } from '../../../../types/cardPlan';
+
+import { calculateDiscountedPrice } from '../../utils/calculeDiscount';
+import { getIcon } from '../../utils/consultIcon';
+
+import './card-plan.scss';
 
 function CardPlan({ type, data }: CardPlanProps) {
 
@@ -34,30 +30,19 @@ function CardPlan({ type, data }: CardPlanProps) {
         navigate('/resume');
       };
 
-    const getIcon = (name : string) => {
-        if (name.toLowerCase().includes('clínica')) {
-          return 'icon-clinic'; 
-        }
-        return 'icon-home';
-      };
-      
-    const calculateDiscountedPrice = (price : any) => {
-        if (type == 'me') {
-            return Number(price);
-        }
-        return Number(price) * 0.95; 
-        
-      };
+   
   return (
     <>
     <div className="plan-card">
         <div className="plan-card__header">
-            <div className="plan-card__header-row">
-            <h5 className="plan-card__title">{data.name}</h5>
-            <img src={`/icon/${getIcon(data.name)}.svg`} alt={data.name} className="plan-card__icon" />
+        { getIcon(data.name) == 'icon-clinic' &&  <span className="plan-card__header-recommended">Plan Recomendado</span> }
+
+            <div className="plan-card__header-row"> 
+              <h5 className="plan-card__title">{data.name}</h5>
+              <img src={`/icon/${getIcon(data.name)}.svg`} alt={data.name} className="plan-card__icon" />
             </div>
             <span className="plan-card__label">Costo del plan</span>
-            <p className="plan-card__price">${ calculateDiscountedPrice(data.price)} al mes</p>
+            <p className="plan-card__price">${ calculateDiscountedPrice(data.price, type)} al mes</p>
         </div>
         <div className="plan-card__body">
             <ul className="plan-card__list">
@@ -76,7 +61,7 @@ function CardPlan({ type, data }: CardPlanProps) {
                 onClick={() =>
                     updateSessionFormData({
                       planName: data.name,
-                      planPrice: calculateDiscountedPrice(data.price),
+                      planPrice: calculateDiscountedPrice(data.price, type),
                     })
                   }>
                 Seleccionar Plan

@@ -1,11 +1,11 @@
 import Card from "../card/Card";
 
-interface Props {
+interface listCardProps {
   selectedPlan: string;
   onSelect: (plan: string) => void;
 }
 
-const ListCards = ({ selectedPlan, onSelect }: Props) => (
+const ListCards = ({ selectedPlan, onSelect }: listCardProps) => (
   <div className="plans__card-group">
     <Card
       title="Para mí"
