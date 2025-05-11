@@ -62,7 +62,7 @@ const RequestForm = () => {
           name="privacy"
           checked={formData.privacy}
           onChange={handleInputChange}
-          className="request__checkboxGroup-input"
+          className={`request__checkboxGroup-input ${formErrors.privacy ? 'error' : ''}`}
         />
         <label htmlFor="privacy" className={`request__checkboxGroup-label ${formErrors.privacy ? 'error' : ''}`}>
           Acepto la Política de Privacidad
@@ -76,14 +76,14 @@ const RequestForm = () => {
           name="comms"
           checked={formData.comms}
           onChange={handleInputChange}
-          className="request__checkboxGroup-input"
+          className={`request__checkboxGroup-input ${formErrors.comms ? 'error' : ''}`}
         />
         <label htmlFor="comms" className={`request__checkboxGroup-label ${formErrors.comms ? 'error' : ''}`}>
           Acepto la Política de Comunicaciones Comerciales
         </label>
       </div>
 
-      <Link to="/plans" className="request__termsLink">
+      <Link to="/" className="request__termsLink">
         Aplican Términos y Condiciones
       </Link>
 
