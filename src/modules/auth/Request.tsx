@@ -8,7 +8,7 @@ const Request = () => {
       <main className="request">
         <section className="request__container max-w-6xl">
           <div className="request__imageBanner">
-            <img src="/image/banner-register.png" alt="Banner promocional seguro Rimac" />
+            <img src="/image/banner-register.webp" alt="Banner promocional seguro Rimac" />
           </div>
 
           <div className="request__formBanner">
@@ -17,7 +17,7 @@ const Request = () => {
                   <span className="request__badge">Seguro Salud Flexible</span>
                   <h1 className="request__title">Creado para ti y tu familia</h1>
               </div>
-              <img src="/image/banner-register.png" alt="Banner Mobile promocional seguro Rimac"  />
+              <img src="/image/banner-register.webp" alt="Banner Mobile promocional seguro Rimac"  />
             </div>
             <p className="request__description">
                     Tú eliges cuánto pagar. Ingresa tus datos, cotiza y recibe nuestra asesoría. 100% online.
