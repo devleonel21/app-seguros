@@ -1,9 +1,10 @@
 import type { CardProps } from '../../../../types/card';
 import './card.scss';
 
-function Card({ title, description, icon, name, value, checked = false, onChange }: CardProps) {
+function Card({ title, description, icon, checked = false, onChange, testId }: CardProps) {
   return (
     <div
+      data-testid={testId}
       className={`card ${checked ? 'card--selected' : ''}`}
       onClick={onChange}
     >
@@ -23,7 +24,7 @@ function Card({ title, description, icon, name, value, checked = false, onChange
         <p className="card__description">{description}</p>
       </div>
 
-      <input
+      {/*<input
         type="radio"
         className="card__radio-input"
         name={name}
@@ -31,7 +32,7 @@ function Card({ title, description, icon, name, value, checked = false, onChange
         checked={checked}
         onChange={(e) => e.stopPropagation()}
         style={{ display: 'none' }}
-      />
+      />*/}
     </div>
   );
 }

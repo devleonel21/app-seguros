@@ -11,7 +11,7 @@ const RequestForm = () => {
   } = useRequestForm();
 
   return (
-    <form className="request__form" onSubmit={handleSubmit}>
+    <form autoComplete="off" className="request__form" onSubmit={handleSubmit}>
       <div className="request__inputGroup">
         <select
           aria-label="Tipo de documento"

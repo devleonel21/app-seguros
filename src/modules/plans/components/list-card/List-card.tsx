@@ -11,19 +11,17 @@ const ListCards = ({ selectedPlan, onSelect }: listCardProps) => (
       title="Para mí"
       description="Cotiza tu seguro de salud y agrega familiares si así lo deseas."
       icon="/icon/icon-for-me.svg"
-      name="plan"
-      value="me"
       checked={selectedPlan === 'me'}
       onChange={() => onSelect('me')}
+      testId="card-me"
     />
     <Card
       title="Para alguien más"
       description="Asegura a un familiar o persona cercana y personaliza su plan."
       icon="/icon/icon-for-other.svg"
-      name="plan"
-      value="other"
       checked={selectedPlan === 'other'}
       onChange={() => onSelect('other')}
+      testId="card-other"
     />
   </div>
 );

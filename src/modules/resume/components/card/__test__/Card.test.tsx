@@ -18,10 +18,10 @@ vi.mock('../../../../../stores/useUserStore', () => ({
 
 describe('Card component', () => { 
 
+      // Verificamos texto en la tarjeta
       it('correctly displays user and plan information', () => {
         render(<MemoryRouter><Card /></MemoryRouter>);
-    
-        // Verificamos texto en la tarjeta
+        
         expect(screen.getByText('Precios calculados para:')).toBeInTheDocument(); 
         expect(screen.getByText('Rocío Pérez')).toBeInTheDocument();
 

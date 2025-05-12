@@ -12,7 +12,7 @@ export const usePlans = () => {
     return plans.filter((plan) => plan.age <= age);
   };
 
-  const handleCardSelect = async (plan: string) => {
+  const handleCardSelect = async (plan: string) => { 
     setSelectedPlan(plan);
 
     try {
