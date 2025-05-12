@@ -1,11 +1,15 @@
-# React + TypeScript + Vite
+# 🧩 Reto React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es un reto de frontend desarrollada con **React**, **TypeScript** y **Vite**, pensada para iniciar aplicaciones frontend modernas, con una estructura limpia, buenas prácticas y fácil escalabilidad.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologías principales
+
+- ⚛️ **React**
+- 🟦 **TypeScript**
+- ⚡ **Vite**
+- 🔧 Herramientas de apoyo: Jira, Jenkins, Figma
 
 ## Expanding the ESLint configuration
 
@@ -52,3 +56,8 @@ export default tseslint.config({
   },
 })
 ```
+## 📬 Contacto
+
+¿Tienes preguntas o te interesa colaborar?
+
+- 💼 **LinkedIn:** [linkedin.com/in/leonel-cube%C3%B1os-sotelo-b80b489b](https://www.linkedin.com/in/leonel-cube%C3%B1os-sotelo-b80b489b/)
